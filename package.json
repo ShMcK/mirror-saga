@@ -1,9 +1,21 @@
 {
   "name": "mirror-saga",
   "version": "0.1.0",
-  "description": "",
-  "keywords": [],
-  "homepage": "",
+  "description": "Plugin to enable redux saga effects in Mirror.js",
+  "keywords": [
+    "redux",
+    "saga",
+    "mirror",
+    "mirror.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shmck/mirror-saga.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shmck/mirror-saga/issues",
+    "email": "shawn.j.mckay@gmail.com"
+  },
   "author": "Shawn McKay <shawn.j.mckay@gmail.com>",
   "license": "ISC",
   "main": "./src/index.js",

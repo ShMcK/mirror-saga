@@ -1,6 +1,6 @@
 {
   "name": "mirror-counter-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mirror counter example",
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^2.3.1",
-    "mirrorx": "file:../../../mirror",
+    "mirrorx": "^0.2.5",
     "mirror-saga": "file:../..",
     "prop-types": "15.5.10",
     "react": "15.0.0",

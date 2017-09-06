@@ -8,6 +8,14 @@ See a [basic counter example](examples/basic).
 
 ## Setup
 
+Install dependencies.
+
+```
+npm install mirror-saga redux-saga
+```
+
+In your mirror setup, apply mirrorSaga.
+
 ```js
 import mirrorSaga from 'mirror-saga'
 

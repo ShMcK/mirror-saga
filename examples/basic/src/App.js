@@ -9,7 +9,7 @@ const App = (props) => (
     <button onClick={() => actions.app.increment()}>+</button>
     {/* dispatch the async action */}
     <button onClick={() => actions.app.incrementAsync()}>+ Async</button>
-    {/* <button onClick={() => actions.app.genInc()}>+ Gen</button> */}
+    <button onClick={() => actions.app.incrementAsyncSaga()}>+ Async Saga</button>
   </div>
 )
 

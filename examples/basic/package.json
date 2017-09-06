@@ -1,19 +1,31 @@
 {
-  "name": "mirror-demo",
+  "name": "mirror-counter-example",
   "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "mirrorx": "0.2.5",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "react-scripts": "1.0.11",
-    "redux-saga": "0.15.6",
-    "mirror-saga": "file:../.."
-  },
+  "description": "Mirror counter example",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "webpack-dev-server --open",
+    "build": "cross-env NODE_ENV=production webpack -p"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^2.3.1",
+    "mirrorx": "file:../../../mirror",
+    "mirror-saga": "file:../..",
+    "prop-types": "15.5.10",
+    "react": "15.0.0",
+    "react-dom": "15.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.1",
+    "babel-core": "^6.14.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.14.1",
+    "babel-preset-react": "^6.14.1",
+    "babel-preset-stage-2": "^6.14.1",
+    "cross-env": "^5.0.1",
+    "css-loader": "^0.28.4",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.0",
+    "webpack-dev-server": "^2.4.5"
   }
 }

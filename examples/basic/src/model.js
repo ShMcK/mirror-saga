@@ -1,6 +1,7 @@
 import { actions } from 'mirrorx'
+import { delay } from 'redux-saga'
 
-const delay = (time) => new Promise((resolve, reject) => (
+const asyncDelay = (time) => new Promise((resolve, reject) => (
   setTimeout(() => resolve(), time))
 )
 
@@ -13,12 +14,12 @@ export default {
   },
   effects: {
     async incrementAsync() {
-      await delay(1000)
+      await asyncDelay(1000)
       actions.app.increment()
     },
-    // *genInc() {
-    //   yield console.log('increment')
-    //   actions.app.increment()
-    // }
+    *incrementAsyncSaga() {
+      yield delay(1000)
+      yield actions.app.increment()
+    }
   }
 }

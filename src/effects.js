@@ -4,12 +4,15 @@ const isGenerator = (fn) => (
   fn && fn.constructor && fn.constructor.name === 'GeneratorFunction'
 )
 
-export const addEffect = effects => (name, handler) => {
-  console.log('addEffect')
-  effects[name] = handler
-  // if generator, start saga
-  if (isGenerator(handler)) {
-    console.log('run ', name)
-    sagaMiddleware.run(effects[name])
+export const addEffect = effects => {
+  return (name, handler) => {
+    
+    if (isGenerator(handler)) {
+      effects[name] = (...p) => {
+        sagaMiddleware.run(handler, ...p)
+      }
+    } else {
+      effects[name] = handler
+    }
   }
 }

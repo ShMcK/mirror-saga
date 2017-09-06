@@ -1,10 +1,14 @@
 import sagaMiddleware from './middleware'
 import { addEffect } from './effects'
 
-const mirrorSaga = (options = { middlewares: [] }) =>
-  Object.assign(options, {
-    middlewares: options.middlewares.concat([sagaMiddleware]),
+const mirrorSaga = (options = {}) => {
+
+  // setup saga middleware
+  const middlewares = options.middlewares || []
+  return Object.assign(options, {
+    middlewares: middlewares.concat([sagaMiddleware]),
     addEffect,
   })
+}
 
 export default mirrorSaga

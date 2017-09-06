@@ -10,6 +10,7 @@ const App = (props) => (
     {/* dispatch the async action */}
     <button onClick={() => actions.app.incrementAsync()}>+ Async</button>
     <button onClick={() => actions.app.incrementAsyncSaga()}>+ Async Saga</button>
+    <button onClick={() => actions.app.setState(0)}>Reset State</button>
   </div>
 )
 

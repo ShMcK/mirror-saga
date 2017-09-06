@@ -10,7 +10,8 @@ export default {
   initialState: 0,
   reducers: {
     increment(state) { return state + 1 },
-    decrement(state) { return state + 1 },
+    decrement(state) { return state - 1 },
+    set(state, value) { return value },
   },
   effects: {
     async incrementAsync() {
@@ -20,6 +21,9 @@ export default {
     *incrementAsyncSaga() {
       yield delay(1000)
       yield actions.app.increment()
+    },
+    *setState(value) {
+      yield actions.app.set(value)
     }
   }
 }

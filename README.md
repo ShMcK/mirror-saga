@@ -2,6 +2,8 @@
 
 Adds [Redux Sagas](https://github.com/redux-saga/redux-saga) to [Mirror.js](https://github.com/mirrorjs/mirror).
 
+> NO LONGER MAINTAINED. MAY HAVE ISSUES.
+
 ## Example
 
 See a [basic counter example](examples/basic).
